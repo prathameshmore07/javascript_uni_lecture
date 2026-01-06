@@ -14,4 +14,4 @@ The goal of this repository is to:
 - **Language:** JavaScript
 - **Environment:** Browser / Node.js
 - **Course Type:** University Programming Course
-- **Level:** Beginner to Intermediate
+
