@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="box" class="section">
+        Hello
+        <span>world</span>
+    </div>
+<script>
+    let box = document.getElementById("#box");
+    let section = document.getElementsByClassName("section");
+
+    // console.log(box)
+    // console.log(section)
+    // let spantag = document.querySelector("span");
+    // console.log(spantag.outerHTML)
+
+    //remove child
+    let parentNode = document.querySelector("#box");
+    let childNode = document.querySelector("span");
+    // parentNode.removeChild(childNode)
+
+    // parentNode.remove(childNode)
+    // console.log(parentNode.outerHTML)
+
+//replace
+// parentNode.replaceChild(document.createElement("p"), childNode);
+// console.log(parentNode.outerHTML)
+
+//replaceWith
+// let replaced =childNode.replaceWith("p")
+// console.log(replaced);
+
+//replace child
+// let newNode =document.createElement("p");//creating elements
+// newNode.textContent="earth" //updating
+// newNode.style="display:inline-block"//updating
+// parentNode.replaceChild(newNode, childNode)
+
+console.log(parentNode.outerHTML)
+console.log(parentNode.innerText)
+console.log(parentNode.textContent)
+
+</script>
+</body>
+</html>
