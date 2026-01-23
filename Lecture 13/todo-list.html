@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <form id="todoForm">
+        <input type="text" id="title" required placeholder="Title">
+        <input type="text" id="description" required placeholder="Description">
+        <input type="date" id="due-date" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <ul id="todoList"></ul>
+
+    <script>
+        let form = document.getElementById("todoForm");
+        let list = document.getElementById("todoList");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let title = document.getElementById("title").value;
+            let description = document.getElementById("description").value;
+            let date = document.getElementById("due-date").value;
+
+            let li = document.createElement("li");
+            li.innerText = title + " | " + description + " | " + date;
+
+            list.appendChild(li);
+            form.reset();
+        });
+    </script>
+
+</body>
+
+</html>
