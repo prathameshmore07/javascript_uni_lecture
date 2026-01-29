@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <button onclick="save()">Save to cache</button>
+    <button onclick="load()">Load from cache</button>
+
+    <img width="400" />
+
+    <script>
+        let path =
+            "https://unsplash.com/photos/looking-up-at-skyscrapers-from-the-ground-MVnayiTmNSE";
+
+        async function save() {
+            // create variable inside our cache, then add media to it
+            let myBox = await caches.open("box");
+            myBox.add(path);
+        }
+
+        async function load() {
+            // open the cache box and get the cached URL
+            let myBox = await caches.open("box");
+            let response = await caches.match(path);
+
+            console.log(response.url);
+            document.querySelector("img").src = response.url;
+        }
+    </script>
+
+</body>
+
+</html>
